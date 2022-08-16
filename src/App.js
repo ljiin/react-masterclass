@@ -10,15 +10,25 @@ const Box = styled.div`
 	background-color: ${(props => props.bgColor)};
 `;
 
-const Circle = styled(Box)`
-	border-radius:50px;
-`;
+const Btn = styled.button`
+	background-color:tomato;
+	border:none;
+	color:#fff;
+`
+
+const Input = styled.input.attrs({required: true, minLength:10})`
+	background-color:tomato;
+`
 
 function App() {
   return (
-	<Father>
-		<Box bgColor="teal" />
-		<Circle bgColor="tomato" />
+	<Father as="h1">
+		<Btn>LOGIN</Btn>
+		<Btn as="a" href="/">LOGIN</Btn>
+		<Input />
+		<Input />
+		<Input />
+		<Input />
 	</Father>
   )
 }
