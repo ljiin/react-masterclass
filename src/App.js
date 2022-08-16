@@ -4,23 +4,21 @@ const Father = styled.div`
 	display:flex;
 `;
 
-const BoxOne = styled.div`
+const Box = styled.div`
 	width:100px;
 	height:100px;
-	background-color: teal;
+	background-color: ${(props => props.bgColor)};
 `;
 
-const BoxTwo = styled.div`
-	width:100px;
-	height:100px;
-	background-color: tomato;
+const Circle = styled(Box)`
+	border-radius:50px;
 `;
 
 function App() {
   return (
 	<Father>
-		<BoxOne />
-		<BoxTwo />
+		<Box bgColor="teal" />
+		<Circle bgColor="tomato" />
 	</Father>
   )
 }
